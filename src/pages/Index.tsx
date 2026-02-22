@@ -36,18 +36,18 @@ const AVATARS = [
 const FEATURES = [
   {
     icon: Zap,
-    title: "Lightning Fast",
-    description: "Built for speed from the ground up. Experience sub-second load times across everything.",
+    title: "Instant Listings",
+    description: "Post items in seconds. Snap a photo, set your price, and reach buyers across campus instantly.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-grade encryption and compliance baked into every layer of the platform.",
+    title: "Verified Students Only",
+    description: "Every user is a verified LAUTECH student. Trade with confidence knowing who you're dealing with.",
   },
   {
     icon: BarChart3,
-    title: "Deep Analytics",
-    description: "Actionable insights with real-time dashboards that help you make smarter decisions.",
+    title: "Campus Deals",
+    description: "Find the best prices on textbooks, gadgets, food, and everything students need — all in one place.",
   },
 ];
 
@@ -80,15 +80,15 @@ const Index = () => {
       <section className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary mb-4">
-            🚀 Early Access — Limited Spots
+            🎓 Made for LAUTECH Students
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-            The future of <span className="text-gradient">your workflow</span> starts here.
+            Buy & sell on <span className="text-gradient">LAUTECH campus</span> with ease.
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto">
-            We're building the tool you've been waiting for. Join the waitlist and be the first to experience it.
+            The student marketplace built for LAUTECH. Textbooks, gadgets, food, services — find it all or sell yours today.
           </p>
 
           {!submitted ? (
@@ -134,7 +134,7 @@ const Index = () => {
           ))}
         </div>
         <p className="text-muted-foreground text-lg">
-          <span className="text-foreground font-bold">2,147</span> people already on the waitlist
+          <span className="text-foreground font-bold">2,147</span> LAUTECH students already on the waitlist
         </p>
       </section>
 

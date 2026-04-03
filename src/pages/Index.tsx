@@ -225,7 +225,7 @@ const Index = () => {
         return;
       }
 
-      setReferralLink(`${window.location.origin}?ref=${referralCode}`);
+      setReferralLink(`https://lautechmarket-three.vercel.app/?ref=${referralCode}`);
       setSubmitted(true);
       toast.success("Welcome! Start sharing to win big.");
       fetchLeaderboard();

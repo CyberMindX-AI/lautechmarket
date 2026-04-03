@@ -2,79 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 230 25% 7%;
-    --foreground: 210 40% 98%;
+    /* Base dark background from photo */
+    --background: 232 20% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 230 25% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 230 25% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 262 83% 64%;
-    --primary-foreground: 210 40% 98%;
+    /* Form Primary (Teal): #12bdae */
+    --primary: 175 83% 41%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 230 25% 15%;
-    --secondary-foreground: 210 40% 98%;
+    /* Accents from user palette */
+    --organic-green: 85 26% 59%;
+    --organic-sage: 69 25% 70%;
+    --organic-beige: 53 45% 80%;
 
-    --muted: 230 20% 18%;
-    --muted-foreground: 215 20% 55%;
+    --secondary: 232 10% 10%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 250 70% 55%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 232 10% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 175 83% 41%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 230 20% 18%;
-    --input: 230 20% 18%;
-    --ring: 262 83% 64%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 175 83% 41%;
 
-    --radius: 0.75rem;
+    --radius: 1.5rem;
 
-    --gradient-start: 262 83% 64%;
-    --gradient-end: 200 90% 55%;
-
-    --sidebar-background: 230 25% 9%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 262 83% 64%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 230 25% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 230 20% 18%;
-    --sidebar-ring: 262 83% 64%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+    --gradient-start: 175 83% 41%;
+    --gradient-end: 85 26% 59%;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(18, 189, 174, 0.1) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30L30 0M30 30L60 30M30 30L30 60M30 30L0 30' stroke='white' stroke-opacity='0.02' stroke-width='1'/%3E%3C/svg%3E");
   }
 }
 
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start)),
-      hsl(var(--gradient-end))
-    );
+    background-image: linear-gradient(135deg,
+        hsl(var(--gradient-start)),
+        hsl(var(--gradient-end)));
   }
 
   .glass {
-    background: hsl(var(--card) / 0.5);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(16px);
-    border: 1px solid hsl(var(--border) / 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
